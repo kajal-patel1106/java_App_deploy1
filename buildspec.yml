@@ -1,23 +1,21 @@
 version: 0.2
 
-
-
-phases: 
+phases:
   pre_build:
     commands:
-      - echo  Nothing  to do in the preBuild phase...
+      - echo Nothing to do in the pre_build phase...
+            
   build:
     commands:
-      - echo Entered the build phase..
       - echo Build started on `date`
       - mvn clean install
-    
+                 
   post_build:
     commands:
-      - echo Entered the post_build phase...
-      - echo Build completed on `date`
+#      - echo Build completed on `date`
+     
 artifacts:
   files:
-    - 'target/ROOT.war'
-    - 'target/*.war'
+     - 'target/ROOT.war'
+#    - 'target/*.war'
   discard-paths: yes
